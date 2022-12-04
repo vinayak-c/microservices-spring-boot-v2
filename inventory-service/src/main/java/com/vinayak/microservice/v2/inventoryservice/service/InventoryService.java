@@ -22,7 +22,7 @@ public class InventoryService {
     @SneakyThrows
     public List<InventoryResponse> isInStock(List<String> skuCode) {
         log.info("Wait started for slow response simulation");
-        Thread.sleep(10000);
+       //Thread.sleep(10000);
         log.info("Wait ended for slow response simulation");
         return inventoryRepository.findBySkuCodeIn(skuCode).stream()
                 .map(inventoryResponse ->
